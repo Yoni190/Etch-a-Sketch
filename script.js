@@ -28,7 +28,11 @@ function createGrid(gridSize){
         temp.style.height = blockHeight +"px";
         temp.style.width = blockWidth +"px";
         temp.addEventListener("mouseover", ()=>{
-            temp.style.backgroundColor = "green";
+            let randomR = Math.floor(Math.random() * 256);
+            let randomG = Math.floor(Math.random() * 256);
+            let randomB = Math.floor(Math.random() * 256);
+            let randomColor = `rgb(${randomR}, ${randomG}, ${randomB})`;
+            temp.style.backgroundColor = randomColor;
         });
         container.appendChild(temp);
     }
