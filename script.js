@@ -4,7 +4,7 @@ const change = document.querySelector("button");
 
 let gridSize = 16;
 
-change.addEventListener("click", ()=>{
+function changeGridSize(){
     let size = prompt("Enter a size from 1-100");
     if(size>100){
         alert("100 is the limit");
@@ -16,7 +16,9 @@ change.addEventListener("click", ()=>{
         }
         createGrid(gridSize);
     }
-});
+}
+
+change.addEventListener("click", changeGridSize);
 
 function createGrid(gridSize){
     blockHeight = 400/gridSize;
